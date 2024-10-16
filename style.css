@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+#switch {
+    display: none;
+}
+label {
+    cursor: pointer;
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    background: grey;
+    border-radius: 20px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+label:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    transition: left 0.3s ease;
+}
+input:checked + label {
+    background: #7ed957;
+}
+input:checked + label:after {
+    left: calc(100% - 35px); 
+}
